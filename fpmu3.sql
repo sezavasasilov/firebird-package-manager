@@ -12,12 +12,20 @@ set term ^;
 /*                             Триггеры                            */
 /*-----------------------------------------------------------------*/
 
-drop trigger fpm$config_bi0^
+-- drop trigger fpm$packages_ad100^
+drop trigger fpm$packages_bd100^
+-- drop trigger fpm$packages_au100^
+drop trigger fpm$packages_bu100^
+-- drop trigger fpm$packages_ai100^
+drop trigger fpm$packages_bi100^
+drop trigger fpm$config_bi100^
 
 /*-----------------------------------------------------------------*/
 /*                             Таблицы                             */
 /*-----------------------------------------------------------------*/
 
+drop table fpm$history^
+drop table fpm$packages^
 drop table fpm$config^
 
 /*-----------------------------------------------------------------*/
@@ -32,6 +40,7 @@ drop exception fpm$version_already_installed^
 /*                             Домены                              */
 /*-----------------------------------------------------------------*/
 
+drop domain fpm$action^
 drop domain fpm$version^
 drop domain fpm$script^
 
